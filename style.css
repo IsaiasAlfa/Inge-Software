@@ -1,0 +1,48 @@
+/* Definición de los colores segun cyberpunk 2077 */
+:root {
+  /*Se pueden abreviar los codigos hexadecimales ej: 0b0b13 001 */
+  --fondo: #0b0b13;
+  --carta: #14141f;
+  --neon-amarillo: #fcee0a;
+  --neon-cyan: #00f0ff;
+  --texto-blanco: #e0e0e0;
+  --texto-secundario: #a0a0b2;
+  --color-borde: #2a2a3d;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto-blanco);
+}
+
+/* Para solo afectar clase (."Nombre de la clase") */
+.Night-City {
+  width: 1200px;
+  border-width: 2px;
+  border-color: var(--color-borde);
+  border-style: inset;
+}
+
+.frase {
+  text-align: center;
+  color: var(--neon-cyan);
+}
+
+header h1 {
+  text-align: center;
+  color: var(--neon-amarillo);
+  font-size: 40px;
+}
+
+.distritos {
+  background-color: var(--carta);
+  color: var(--texto-secundario);
+}
+
+/* Modificación para un id */
+#autor {
+  border-top: 5px solid var(--color-borde);
+  color: var(--neon-amarillo);
+  text-align: center;
+}
