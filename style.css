@@ -44,7 +44,7 @@ header h1 {
 section {
   background-color: var(--carta);
   border-left: 5px solid var(--neon-cyan);
-  padding: 2px;
+  padding: 10px;
   margin-bottom: 50px;
   border-radius: 6px;
 }
