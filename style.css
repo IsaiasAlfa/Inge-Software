@@ -16,23 +16,37 @@ body {
   color: var(--texto-blanco);
 }
 
-/* Para solo afectar clase (."Nombre de la clase") */
-.Night-City {
-  width: 1200px;
-  border-width: 2px;
-  border-color: var(--color-borde);
-  border-style: inset;
-}
-
-.frase {
-  text-align: center;
-  color: var(--neon-cyan);
+header {
+  background-color: var(--carta);
+  border-bottom: 5px solid var(--color-borde);
+  margin-bottom: 50px;
 }
 
 header h1 {
   text-align: center;
   color: var(--neon-amarillo);
-  font-size: 40px;
+  font-size: 60px;
+}
+
+.frase {
+  text-align: center;
+  color: var(--neon-cyan);
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Para solo afectar clase (."Nombre de la clase") */
+.Night-City {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  background-color: var(--carta);
+  border-left: 5px solid var(--neon-cyan);
+  padding: 2px;
+  margin-bottom: 50px;
+  border-radius: 6px;
 }
 
 .distritos {
