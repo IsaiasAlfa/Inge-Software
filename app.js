@@ -130,3 +130,16 @@ formTrago.addEventListener('submit', (evento) => {
     formTrago.reset();
   }
 });
+
+// Capturamos todos los botones de los títulos del acordeón
+const titulosAcordeon = document.querySelectorAll('.acordeon-titulo');
+
+titulosAcordeon.forEach((titulo) => {
+  titulo.addEventListener('click', () => {
+    // Obtenemos el elemento padre (.acordeon-item)
+    const itemActual = titulo.parentElement;
+
+    // Alternamos la clase .activo en el ítem seleccionado
+    itemActual.classList.toggle('activo');
+  });
+});
