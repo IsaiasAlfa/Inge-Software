@@ -19,6 +19,12 @@ const selectBase = document.getElementById('base-alcohol');
 const inputToque = document.getElementById('toque-especial');
 const mensajeExito = document.getElementById('mensaje-exito');
 
+// Elemento interactivo extra: Óptica Kiroshi
+const btnKiroshi = document.getElementById('btn-kiroshi');
+
+// Capturamos todos los botones de los títulos del acordeón
+const titulosAcordeon = document.querySelectorAll('.acordeon-titulo');
+
 // Arreglo con las imagenes que se quieren mostrar
 const imagenesNightCity = [
   "https://i.pinimg.com/originals/68/07/a1/6807a1a41e32c0b7d4bd88c5cc95d003.jpg",
@@ -131,9 +137,6 @@ formTrago.addEventListener('submit', (evento) => {
   }
 });
 
-// Capturamos todos los botones de los títulos del acordeón
-const titulosAcordeon = document.querySelectorAll('.acordeon-titulo');
-
 titulosAcordeon.forEach((titulo) => {
   titulo.addEventListener('click', () => {
     // Obtenemos el elemento padre (.acordeon-item)
@@ -142,4 +145,18 @@ titulosAcordeon.forEach((titulo) => {
     // Alternamos la clase .activo en el ítem seleccionado
     itemActual.classList.toggle('activo');
   });
+});
+
+
+
+btnKiroshi.addEventListener('click', () => {
+  // Alterna la clase en la etiqueta body
+  document.body.classList.toggle('modo-kiroshi');
+
+  // Cambia el texto del botón según el estado activo/inactivo
+  if (document.body.classList.contains('modo-kiroshi')) {
+    btnKiroshi.textContent = 'Desactivar Óptica Kiroshi';
+  } else {
+    btnKiroshi.textContent = 'Activar Óptica Kiroshi';
+  }
 });

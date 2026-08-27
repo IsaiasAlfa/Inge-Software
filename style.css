@@ -250,3 +250,28 @@ section {
   border-bottom: 1px solid var(--neon-cyan);
   color: var(--neon-amarillo);
 }
+
+/* Estilo del botón extra */
+.btn-secundario {
+  background-color: var(--neon-rojo, #ff0055);
+  color: #fff;
+  border: 1px solid var(--neon-rojo, #ff0055);
+}
+
+.btn-secundario:hover {
+  background-color: #fff;
+  color: #ff0055;
+  box-shadow: 0 0 10px #ff0055;
+}
+
+/* Modo Táctico Kiroshi aplicado dinámicamente al body */
+body.modo-kiroshi {
+  background-color: #041214;
+  color: #00ffaa;
+  filter: sepia(30%) hue-rotate(110deg) contrast(1.1);
+}
+
+body.modo-kiroshi section {
+  border-left-color: #00ffaa;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.2);
+}
