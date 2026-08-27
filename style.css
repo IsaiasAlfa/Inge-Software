@@ -154,3 +154,49 @@ section {
   color: #000;
   box-shadow: 0 0 10px var(--neon-amarillo);
 }
+
+/* Formulario */
+.campo {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  color: var(--texto-secundario);
+  font-weight: bold;
+}
+
+.campo input, 
+.campo select {
+  padding: 10px;
+  background-color: #0b0b13;
+  border: 1px solid var(--color-borde);
+  color: var(--texto-blanco);
+  border-radius: 4px;
+}
+
+.campo input:focus, 
+.campo select:focus {
+  outline: none;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+/* Mensajes de validación */
+.error {
+  color: #ff0055; /* Neon rojo para errores */
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.exito {
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid var(--neon-amarillo);
+  background-color: rgba(252, 238, 10, 0.1);
+  color: var(--neon-amarillo);
+  text-align: center;
+  font-weight: bold;
+}

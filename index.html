@@ -62,10 +62,10 @@
 
         <p>Al final, la gran trampa de Night City es la ilusión de que puedes convertirte en una leyenda. La ciudad alimenta la ambición de la gente haciéndoles creer que pueden vencer al sistema, pero la realidad es que muy pocos dejan huella. Los que logran destacar no consiguen un final feliz, sino que terminan convertidos en mitos trágicos y canciones de bar, recordándonos que en este lugar lo único que realmente perdura es la propia ciudad.</p>
       
-        <!-- Dentro de tu segunda sección <section> -->
+        <!-- Botón para abirir el modal -->
         <button id="btn-afterlife" class="btn-cyber">Ver expediente: Afterlife</button>
 
-        <!-- Estructura del Modal (Puedes ponerlo al final antes de </body>) -->
+        <!-- Estructura del Modal -->
         <div id="modal-afterlife" class="modal-fondo oculto">
           <div class="modal-contenido">
             <span id="cerrar-modal" class="cerrar">&times;</span>
@@ -78,6 +78,44 @@
           </div>
         </div>
 
+      </section>
+      <section>
+        <h2>Menu del Afterlife: Registra tu Trago de Leyenda</h2>
+        <p class="frase">«Solo las verdaderas leyendas entran en esta carta»</p>
+
+        <form id="form-trago" novalidate>
+          <!-- Campo para el nombre -->
+          <div class="campo">
+            <label for="nombre-leyenda">Nombre de la Leyenda (Alias):</label>
+            <input type="text" id="nombre-leyenda" placeholder="Ej: Johnny Silverhand, V, David">
+            <span class="error" id="error-nombre"></span>
+          </div>
+
+          <!-- Campo para la base -->
+          <div class="campo">
+            <label for="base-alcohol">Base de Alcohol:</label>
+            <select id="base-alcohol">
+              <option value="">Selecciona una base...</option>
+              <option value="tequila">Tequila</option>
+              <option value="whisky">Whisky</option>
+              <option value="vodka">Vodka NiCola</option>
+              <option value="ron">Ron Synth</option>
+            </select>
+            <span class="error" id="error-base"></span>
+          </div>
+
+          <!-- Campo para el ingrediente especial -->
+          <div class="campo">
+            <label for="toque-especial">Toque Especial / Mezcla:</label>
+            <input type="text" id="toque-especial" placeholder="Ej: Chorro de cerveza, picante, hielo seco">
+            <span class="error" id="error-toque"></span>
+          </div>
+
+          <button type="submit" class="btn-cyber">Registrar en la Carta</button>
+
+          <!-- Mensaje de éxito al validar -->
+          <div id="mensaje-exito" class="exito oculto"></div>
+        </form>
       </section>
     </main>
 

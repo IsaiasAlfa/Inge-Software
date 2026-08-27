@@ -1,12 +1,23 @@
 // Crear variables para capturar los elementos de la página
 const btnDistritos = document.getElementById('btn-distritos');
 const contenedorDistritos = document.getElementById('contenedor-distritos');
+
+// Variables para el modal del Afterlife
 const btnAfterlife = document.getElementById('btn-afterlife');
 const modalAfterlife = document.getElementById('modal-afterlife');
 const btnCerrar = document.getElementById('cerrar-modal');
+
+// Variables para el carrusel de imágenes
 const imgElemento = document.getElementById('img-carrusel');
 const btnPrev = document.getElementById('btn-prev');
 const btnNext = document.getElementById('btn-next');
+
+// Variables para creación de tragos
+const formTrago = document.getElementById('form-trago');
+const inputNombre = document.getElementById('nombre-leyenda');
+const selectBase = document.getElementById('base-alcohol');
+const inputToque = document.getElementById('toque-especial');
+const mensajeExito = document.getElementById('mensaje-exito');
 
 // Arreglo con las imagenes que se quieren mostrar
 const imagenesNightCity = [
@@ -75,4 +86,47 @@ btnPrev.addEventListener('click', () => {
   }
   
   mostrarImagen();
+});
+
+formTrago.addEventListener('submit', (evento) => {
+  // Evitar que el formulario se envíe y la página se recargue
+  evento.preventDefault();
+
+  // Bandera para saber si todo es válido
+  let esValido = true;
+
+  // Limpiar mensajes de error previos
+  document.querySelectorAll('.error').forEach(span => span.textContent = '');
+  mensajeExito.classList.add('oculto');
+
+  // Validación: Nombre de mínimo 3 caracteres
+  if (inputNombre.value.trim().length < 3) {
+    document.getElementById('error-nombre').textContent = 'El alias debe tener al menos 3 caracteres.';
+    esValido = false;
+  }
+
+  // Validación: No puede estar vacío el select de base de alcohol
+  if (selectBase.value === '') {
+    document.getElementById('error-base').textContent = 'Debes elegir una base de alcohol para tu trago.';
+    esValido = false;
+  }
+
+  // Validación: No puede estar vacío el input de toque especial
+  if (inputToque.value.trim() === '') {
+    document.getElementById('error-toque').textContent = 'Especifica el toque especial de tu receta.';
+    esValido = false;
+  }
+
+  // Si todo salió bien, mostrar mensaje de exito y limpiar el formulario
+  if (esValido) {
+    const nombre = inputNombre.value.trim();
+    const base = selectBase.options[selectBase.selectedIndex].text;
+    const toque = inputToque.value.trim();
+
+    mensajeExito.textContent = `¡Trago "${nombre}" registrado! Receta: Base de ${base} con ${toque}. Salud en el Afterlife.`;
+    mensajeExito.classList.remove('oculto');
+
+    // Limpiar el formulario
+    formTrago.reset();
+  }
 });
