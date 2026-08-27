@@ -31,16 +31,22 @@
 
         <p>La voracidad de Night City no se extiende por igual; cada distrito representa un síntoma diferente de este sistema implacable</p>
 
-        <!-- ul lista no ordenada -->
-        <!-- clase para selector en la parte de  -->
-        <ul class="distritos">
-          <li>Watson</li>
-          <li>Westbrook</li>
-          <li>City Center</li>
-          <li>Heywood</li>
-          <li>Pacifica</li>
-          <li>Santo Domingo</li>
-        </ul>
+        <!-- Botón para mostrar/ocultar los distritos -->
+        <button id="btn-distritos" class="btn-cyber">Mostrar Distritos</button>
+
+        <!-- Contenedor oculto -->
+        <div id="contenedor-distritos" class="oculto">
+          <!-- ul lista no ordenada -->
+          <!-- clase para selector en la parte de  -->
+          <ul class="distritos">
+            <li>Watson</li>
+            <li>Westbrook</li>
+            <li>City Center</li>
+            <li>Heywood</li>
+            <li>Pacifica</li>
+            <li>Santo Domingo</li>
+          </ul>
+        </div>
       </section>
       
       <section>
@@ -48,6 +54,23 @@
         <p class="frase">Prefiero arder en llamas y convertirme en leyenda antes que vivir una vida larga, gris y sin que nadie me recuerde. </p>
 
         <p>Al final, la gran trampa de Night City es la ilusión de que puedes convertirte en una leyenda. La ciudad alimenta la ambición de la gente haciéndoles creer que pueden vencer al sistema, pero la realidad es que muy pocos dejan huella. Los que logran destacar no consiguen un final feliz, sino que terminan convertidos en mitos trágicos y canciones de bar, recordándonos que en este lugar lo único que realmente perdura es la propia ciudad.</p>
+      
+        <!-- Dentro de tu segunda sección <section> -->
+        <button id="btn-afterlife" class="btn-cyber">Ver expediente: Afterlife</button>
+
+        <!-- Estructura del Modal (Puedes ponerlo al final antes de </body>) -->
+        <div id="modal-afterlife" class="modal-fondo oculto">
+          <div class="modal-contenido">
+            <span id="cerrar-modal" class="cerrar">&times;</span>
+            <h2>The Afterlife</h2>
+            <p class="frase">«El club de los mercenarios más elite de Night City»</p>
+            <p>Ubicado en una antigua morgue, el Afterlife es el punto de encuentro definitivo para fixers y mercenarios de primera categoría.</p>
+            <hr class="linea-cyber">
+            <h3>La Regla de Oro</h3>
+            <p>Para que una bebida lleve tu nombre en la carta del Afterlife, no basta con ser un buen mercenario... tienes que morir en medio de una operación legendaria espectacular.</p>
+          </div>
+        </div>
+
       </section>
     </main>
 
@@ -57,5 +80,7 @@
       <p>Isaías Alberto Alfaro Ugalde C20261 16/8/2026</p>
     </footer>
 
+    <!-- Script que tiene los elementos interactivos -->
+    <script src="app.js"></script>
   </body>
 </html>

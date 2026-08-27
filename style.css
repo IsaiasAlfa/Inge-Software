@@ -60,3 +60,60 @@ section {
   color: var(--neon-amarillo);
   text-align: center;
 }
+
+/* Fondo oscuro semitransparente que cubre la pantalla */
+.modal-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Caja de la ventana modal */
+.modal-contenido {
+  background-color: var(--carta);
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 15px var(--neon-cyan);
+  padding: 25px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  border-radius: 4px;
+}
+
+.modal-contenido h2 {
+  color: var(--neon-amarillo);
+  margin-top: 0;
+}
+
+/* Botón de cerrar (X) */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: var(--neon-cyan);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: var(--neon-amarillo);
+}
+
+.linea-cyber {
+  border: 0;
+  height: 1px;
+  background: var(--color-borde);
+  margin: 15px 0;
+}
+
+.oculto {
+  display: none;
+}
